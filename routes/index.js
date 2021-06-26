@@ -27,7 +27,19 @@ routes.post('/login', (req, res, next) => {
 }, verifyPassword);
 
 const userRoutes = require('./user');
+<<<<<<< Updated upstream
 
 routes.use('/user', userRoutes);
+=======
+const loginRoute = require('./login');
+const settingRoutes = require('./settings');
+const uploadRoute = require('./upload');
+
+routes.use('/user', userRoutes);
+routes.use('/login', loginRoute);
+routes.use('/settings', settingRoutes);
+routes.use('/upload', uploadRoute);
+routes.use('/uploads', express.static('uploads'));
+>>>>>>> Stashed changes
 
 module.exports = routes;

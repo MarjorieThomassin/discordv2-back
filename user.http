@@ -1,10 +1,39 @@
 GET http://localhost:8000/user
 
 ###
+
+PUT http://localhost:8000/user/15
+Content-type: application/json
+
+{
+  "pseudo": "Crow",
+  "bio": "I love cheese",
+  "image_path": "oui"
+}
+
+###
+
 POST http://localhost:8000/user
 Content-type: application/json
 
 {
     "email": "jm@mail.com",
     "password": "123456"
+}
+
+###
+DELETE http://localhost:8000/user/17
+Content-Type: application/json
+
+###
+GET http://localhost:8000/settings/16
+
+###
+PUT http://localhost:8000/settings/16
+Content-type: application/json
+
+{
+  "pseudo": "Senshi Crow",
+  "bio": "I love dev, draw",
+  "image_path": "oui"
 }
