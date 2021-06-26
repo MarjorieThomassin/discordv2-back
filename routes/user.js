@@ -1,9 +1,10 @@
 const userRoutes = require('express').Router();
 const db = require('../db-config');
 const { hashPassword } = require('../middlewares/auth');
+const connection = require('../db-config');
 
 userRoutes.get('/', (req, res) => {
-  db.query('SELECT * from user', (err, results) => {
+  db.query('SELECT * FROM user', (err, results) => {
     if (err) {
       console.log(err);
       res.status(500);
@@ -63,4 +64,5 @@ userRoutes.put('/:id', (req, res) => {
     }
   });
 });
+
 module.exports = userRoutes;

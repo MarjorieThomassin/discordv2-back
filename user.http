@@ -2,12 +2,12 @@ GET http://localhost:8000/user
 
 ###
 
-PUT http://localhost:8000/user/15
+PUT http://localhost:8000/user/16
 Content-type: application/json
 
 {
-  "pseudo": "Crow",
-  "bio": "I love cheese",
+  "pseudo": "Little Crow",
+  "bio": "I love dev",
   "image_path": "oui"
 }
 
