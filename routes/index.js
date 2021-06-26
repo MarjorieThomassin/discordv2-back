@@ -8,8 +8,10 @@ routes.post('/', (req, res) => {
 
 const userRoutes = require('./user');
 const loginRoute = require('./login');
+const settingRoutes = require('./settings');
 
 routes.use('/user', userRoutes);
 routes.use('/login', loginRoute);
+routes.use('/settings', settingRoutes);
 
 module.exports = routes;
