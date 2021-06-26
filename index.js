@@ -27,6 +27,8 @@ app.listen(port, (err) => {
   }
 });
 
+app.use('/uploads', express.static('uploads'));
+
 const routes = require('./routes');
 
 app.use(routes);
