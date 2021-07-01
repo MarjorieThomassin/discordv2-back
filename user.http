@@ -17,7 +17,7 @@ POST http://localhost:8000/user
 Content-type: application/json
 
 {
-    "email": "jm@mail.com",
+    "email": "marjolpb@mail.com",
     "password": "123456"
 }
 
@@ -26,10 +26,10 @@ DELETE http://localhost:8000/user/17
 Content-Type: application/json
 
 ###
-GET http://localhost:8000/settings/16
+GET http://localhost:8000/settings/1
 
 ###
-PUT http://localhost:8000/settings/16
+PUT http://localhost:8000/settings/1
 Content-type: application/json
 
 {

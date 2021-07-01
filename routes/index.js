@@ -1,4 +1,5 @@
 const routes = require('express').Router();
+const express = require('express');
 
 // define the index route
 routes.post('/', (req, res) => {
@@ -19,6 +20,5 @@ routes.use('/login', loginRoute);
 routes.use('/settings', settingRoutes);
 routes.use('/upload', uploadRoute);
 routes.use('/uploads', express.static('uploads'));
-
 
 module.exports = routes;

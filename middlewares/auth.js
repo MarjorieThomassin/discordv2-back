@@ -10,7 +10,10 @@ const verifyPassword = async (req, res) => {
   if (await argon2.verify(req.db.password, req.body.password)) {
     const token = jwt.sign({ sub: req.db.id }, 'secret');
 
-    res.status(200).json({ token, email: req.body.email, userId: req.db.id });
+    const data = { token, ...req.db };
+    delete data.password;
+
+    res.status(200).json(data);
   } else {
     res.sendStatus(400);
   }
